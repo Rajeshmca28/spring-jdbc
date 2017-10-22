@@ -14,7 +14,7 @@ public class SpringJDBCDemo {
 				"spring-config.xml");
 		EmpDAO empDAO = (EmpDAO) context.getBean("empDAO");
 		// Emp emp = new Emp("Rakesh",28L);
-		Emp emp = new Emp(6, "Raj", "20-12-1992", 20000.0);
+		Emp emp = new Emp(14, "Raj", "20-12-1992", 20000.0);
 		empDAO.insert(emp);
 
 		emp = empDAO.findByEmpNo(1);

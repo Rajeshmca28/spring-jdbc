@@ -6,6 +6,7 @@ public class Emp {
 	private String empName;
 	private String dob;
 	private Double salary;
+
 	public Emp(){
 		
 	}

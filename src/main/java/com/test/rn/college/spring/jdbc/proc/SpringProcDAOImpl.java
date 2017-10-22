@@ -10,6 +10,8 @@ import org.springframework.jdbc.core.simple.SimpleJdbcCall;
 
 import com.test.rn.college.jdbc.Emp;
 
+
+
 public class SpringProcDAOImpl implements EmpDAO {
 	private DataSource dataSource;
 	private SimpleJdbcCall jdbcCall;
@@ -21,8 +23,7 @@ public class SpringProcDAOImpl implements EmpDAO {
 	}
 
 	public Emp getEmp(Integer empNo) {
-		SqlParameterSource in = new MapSqlParameterSource().addValue("emp_n",
-				empNo);
+		SqlParameterSource in = new MapSqlParameterSource().addValue("emp_n",empNo);
 		Map<String, Object> out = jdbcCall.execute(in);
 		Emp emp = new Emp();
 		emp.setEmpName((String)out.get("e_name"));

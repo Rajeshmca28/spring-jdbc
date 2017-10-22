@@ -9,7 +9,7 @@
 
 	<import resource="spring-datasource.xml" />
 
-	<bean id="empDAO" class="com.test.rn.college.spring.jdbc.proc.SpringProcDAOImpl">
+	<bean id="empDAO" class="com.test.rn.college.spring.jdbc.proc.ProductDAOSupportDemo">
 		<property name="dataSource" ref="dataSource" />
 	</bean>
 

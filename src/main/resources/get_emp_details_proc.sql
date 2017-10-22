@@ -35,3 +35,17 @@ CREATE PROCEDURE insert_emp(emp_no BIGINT, emp_name VARCHAR(20), sal DOUBLE, dob
 DELIMITER ;
 
 CALL insert_emp(12,'Rajesh-K', 50000,'20-12-1993')
+
+
+
+DELIMITER $$
+
+CREATE
+    FUNCTION `insert-student`(s_id VARCHAR(10),s_name VARCHAR(20),s_dob VARCHAR(20),s_cource VARCHAR(5),s_addr VARCHAR(40)) RETURNS VARCHAR(10)
+    BEGIN
+	 DECLARE ss_id VARCHAR(10);
+        SELECT stud_id INTO ss_id FROM student;
+	RETURN ss_id;
+    END$$
+
+DELIMITER ;

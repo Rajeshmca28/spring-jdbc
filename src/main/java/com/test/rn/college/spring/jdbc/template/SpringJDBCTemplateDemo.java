@@ -14,8 +14,8 @@ public class SpringJDBCTemplateDemo {
 	public static void main(String[] args) {
 		ConfigurableApplicationContext context = new ClassPathXmlApplicationContext("spring-config-template.xml");
 		EmpDAO empDAO = (EmpDAO) context.getBean("empDAO");
-		Emp emp = new Emp(9, "Raj-update", "20-12-1992", 30000.0);
-		//empDAO.insert(emp);
+		Emp emp = new Emp(10, "Raj-update", "20-12-1992", 30000.0);
+		empDAO.insert(emp);
 		empDAO.update(emp);
 	    emp =empDAO.findByEmpNo(7);
 		 List<Map<String,Object>> list =empDAO.findAllEmp();

@@ -14,6 +14,7 @@ public class SpringProcDemo {
 				"spring-config-proc.xml");
 		EmpDAO empDAO = (EmpDAO) context.getBean("empDAO");
 		Emp emp = empDAO.getEmp(9);
+		System.out.println(emp.getEmpNo());
 		System.out.println(emp.getEmpName());
 		System.out.println(emp.getSalary());
 		System.out.println(emp.getDob());
